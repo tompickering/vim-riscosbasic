@@ -1,6 +1,6 @@
 function! riscosbasic_impl#decode(path)
     if &filetype == 'riscosbasic'
-        execute ":'[,']!riscosbasic -d " . a:path
+        execute ":'[,']!riscosbasic -d " . fnameescape(a:path)
     endif
 endfunction
 
